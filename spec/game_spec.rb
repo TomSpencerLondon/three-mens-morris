@@ -15,8 +15,8 @@ describe Game do
   end
 
   it 'white player moves first' do
-    position = [0, 0]
-    colour = "W"
-    expect(subject.place_piece(position, colour)).to eq([["W", "O", "O"], ["O", "O", "O"], ["O", "O", "O"]])
+    subject.place_piece([0, 0], "W")
+    expect(subject.board).to eq([["W", "O", "O"], ["O", "O", "O"], ["O", "O", "O"]])
   end
+
 end

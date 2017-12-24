@@ -13,6 +13,5 @@ attr_reader :board, :player1, :player2
     position1 = position[0]
     position2 = position[1]
     @board[position1][position2] = colour
-    @board
   end
 end
