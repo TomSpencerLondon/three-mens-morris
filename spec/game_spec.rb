@@ -14,9 +14,14 @@ describe Game do
     expect(subject.player2).to eq("B")
   end
 
-  it 'white player moves first' do
+  it 'places a piece on the board' do
     subject.place_piece([0, 0], "W")
     expect(subject.board).to eq([["W", "O", "O"], ["O", "O", "O"], ["O", "O", "O"]])
+  end
+
+  it 'white player goes first' do
+    expect{subject.place_piece([0, 0], "B")}.to raise_error("White player has first move")
+
   end
 
 end
